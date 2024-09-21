@@ -1,0 +1,150 @@
+.Header {
+    background-color: #f8f9fa;
+    height: 93px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.Header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+
+}
+
+.Header ul {
+    display: flex;
+    margin-right: 50px;
+}
+
+.Header ul li {
+    margin-right: 30px;
+}
+
+.Header ul li a {
+    color: var(--main-color);
+    transition: var(--main-transition);
+    font-size: 16px;
+}
+
+.Header ul li a:hover {
+    color: var(--main-color-alt);
+}
+
+.active {
+    color: var(--main-color-alt);
+}
+
+.Header .services {
+    display: flex;
+}
+
+.Header .icons {
+    display: flex;
+
+}
+
+.Header .icons i {
+    margin-right: 17px;
+    font-size: 19px;
+}
+
+.Header .navb {
+    display: none;
+    cursor: pointer;
+}
+
+.Header .navb .nav {
+    font-size: 45px;
+    color: var(--main-color);
+    text-align: center;
+
+}
+
+@media(max-width:1020px) {
+    .Header .services {
+        display: none;
+    }
+
+    .Header .navb {
+        display: block;
+    }
+}
+
+.responsive-nav {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    right: -250px;
+    background-color: #f8f9fa;
+    width: 250px;
+    z-index: 10;
+    height: 100vh;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0px;
+    transition: 0.3s ease-in-out;
+}
+
+.responsive-nav ul {
+    display: flex;
+    flex-direction: column;
+    height: 62%;
+    justify-content: space-between;
+}
+
+.responsive-nav .ex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.responsive-nav .ex i {
+    font-size: 36px;
+    cursor: pointer;
+}
+
+.responsive-nav ul li {
+    margin-top: 20px;
+    transition: 0.3s;
+}
+
+.responsive-nav ul li:hover {
+    padding-left: 10px;
+}
+
+.responsive-nav ul li a {
+    font-size: 21px;
+}
+
+.responsive-nav .icons {
+    margin-bottom: 90px;
+}
+
+@media(max-width:600px) {
+    .responsive-nav {
+        right: -250px;
+    }
+}
+
+@media(min-width:1020) {
+    .responsive-nav {
+        display: none;
+    }
+}
+
+.icon {
+    padding-right: 25px;
+    cursor: pointer;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

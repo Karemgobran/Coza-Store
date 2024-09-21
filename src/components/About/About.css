@@ -1,0 +1,123 @@
+.products {
+    padding-top: 100px;
+}
+
+.products .product-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.products .product-header h2 {
+    font-size: calc(1.325rem + .9vw);
+    color: rgb(33 37 41);
+    letter-spacing: 1.3px;
+}
+
+.products .product-header a {
+    text-decoration: underline;
+    border: none;
+    font-size: 1.1em;
+    letter-spacing: 2px;
+    color: var(--main-color);
+}
+
+.products .boxes {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 20px 0;
+    /* flex-wrap: wrap; */
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+
+.products .boxes::-webkit-scrollbar {
+    display: none;
+}
+
+
+.products .boxes .box {
+    position: relative;
+    margin-bottom: 20px;
+    flex: 0 0 auto;
+    width: 320px;
+    height: 450px;
+}
+
+.products .boxes .box:not(:last-child) {
+    margin-right: 20px;
+}
+
+.products .boxes .image {
+    overflow: hidden;
+    position: relative;
+}
+
+.products .boxes .box .image .cart {
+    position: absolute;
+    bottom: -85px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    background-color: #212529;
+    color: white;
+    padding: 1px 13px;
+    border-radius: 14px;
+    display: flex;
+    justify-content: space-around;
+    width: 70%;
+    height: 40px;
+    align-items: center;
+    transition: 0.3s ease-in-out;
+
+}
+
+.products .boxes .box .image .cart:hover {
+    background-color: var(--main-color-alt);
+}
+
+.products .boxes .box .image:hover .cart {
+    bottom: 50px;
+}
+
+.products .boxes .box .image .cart p {
+    font-size: 1.1em;
+    letter-spacing: 2px;
+}
+
+.products .boxes .box .content {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px;
+}
+
+.products .boxes .box .content a {
+    color: var(--dark-color);
+    text-decoration: none;
+    transition: 0.3s color ease-out;
+    font-size: 1.5em;
+}
+
+.products .boxes .box .content span {
+    color: var(--main-color-alt);
+    text-decoration: none;
+    transition: 0.3s color ease-out;
+    font-size: 1.5em;
+}
+
+.products .dotet {
+    display: flex;
+    justify-content: center;
+}
+
+.products .dotet span {
+    width: 15px;
+    height: 15px;
+    background-color: var(--main-color-alt);
+    border-radius: 50%;
+    margin-right: 6px;
+    cursor: pointer;
+}
+
+.products .dotet .current {
+    background-color: #717171;
+}

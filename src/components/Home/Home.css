@@ -1,0 +1,132 @@
+.section {
+    height: 100vh
+}
+
+@media(max-width:797px) {
+    .section {
+        margin-top: 72px;
+    }
+}
+
+.section .container {
+    background-color: #edf1f3;
+    height: 100%;
+    padding-left: 50px;
+    padding-right: 50px;
+    position: relative;
+    /* overflow: hidden; */
+}
+
+.section .container .page {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    transition: 0.3s ease-in-out;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+
+.section .container .page::-webkit-scrollbar {
+    display: none;
+}
+
+.section .container .page-one,
+.section .container .page-two {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex: 0 0 auto;
+    width: 100%;
+    margin-right: 40px;
+
+}
+
+
+.section .banner-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    margin-left: 150px;
+}
+
+.section .banner-content h1 {
+    font-size: 80px;
+    font-weight: 300;
+    line-height: 1.2;
+    text-transform: uppercase;
+    padding-bottom: 3rem;
+    text-align: start;
+}
+
+.section .banner-content .btn {
+    padding: 0.8em 2.8em;
+    font-size: 1.1em;
+    letter-spacing: 2px;
+    border: none;
+    background-color: #212529;
+    color: white;
+    transition: var(--main-transition) ease-in-out;
+}
+
+.section .banner-content .btn:hover {
+    background-color: var(--main-color-alt);
+
+}
+
+.section .image {
+    position: relative;
+    right: 0;
+    top: -40px;
+
+}
+
+@media(max-width:767px) {
+    .section .image img {
+        width: 100%;
+    }
+
+    .section .container {
+        padding: 0;
+    }
+}
+
+.section .chevron {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+}
+
+.section .chevron i {
+    font-size: 100px;
+    color: var(--main-color-alt);
+    cursor: pointer;
+}
+
+.move {
+    left: -100%;
+}
+
+@media(max-width:600px) {
+    .section .banner-content {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .section .container .page-one,
+    .section .container .page-two {
+        flex-direction: column-reverse;
+        margin: 0;
+    }
+
+    .section .banner-content h1 {
+        font-size: 40px;
+        text-align: center;
+    }
+}
