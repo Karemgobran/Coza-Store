@@ -4,14 +4,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons"
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons"
 import { useContext } from "react";
-import { LoginContext } from '../../Context/Login/Login'; // تأكد إن المسار صحيح
+import { LoginContext } from '../../Context/Login/Login';
 
 export function Navbar() {
-    const { isLoggedIn, setIsLoggedIn } = useContext(LoginContext); // استخدام LoginContext
+    const { isLoggedIn, setIsLoggedIn } = useContext(LoginContext);
 
     const handleLogout = () => {
-        setIsLoggedIn(false); // تعيين حالة تسجيل الخروج
-        // هنا يمكنك إضافة كود لحذف بيانات المستخدم إذا لزم الأمر
+        setIsLoggedIn(false);
+
     };
 
     return (
@@ -32,7 +32,7 @@ export function Navbar() {
                         </ul>
                     </div>
                     <div className="icons">
-                        {isLoggedIn && ( // تظهر الأيقونات بس لو المستخدم مسجل دخول
+                        {isLoggedIn && (
                             <>
                                 <FontAwesomeIcon icon={faMagnifyingGlass} className="search-icon icon" />
                                 <FontAwesomeIcon icon={faShoppingCart} className="cart-icon icon" />
